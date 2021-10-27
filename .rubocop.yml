@@ -1,12 +1,52 @@
----
 AllCops:
+  TargetRubyVersion: 2.5
   Exclude:
     - 'spec/**/*'
-  TargetRubyVersion: 2.5
-# Not going to use a Rails gem for this, disable until
-# Ruby 2.3+
-Layout/HeredocIndentation:
+    - 'vendor/**/*'
+  NewCops: enable
+
+Style/IfUnlessModifier:
   Enabled: false
-# A bit longer than default
+
 Layout/LineLength:
-  Max: 100
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Naming/FileName:
+  Enabled: false
+
+Style/InverseMethods:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 22
+
+Style/StderrPuts:
+  Enabled: false
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+  #PreferredName: something_that_describes_the_actual_exception_or_error
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 120
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
